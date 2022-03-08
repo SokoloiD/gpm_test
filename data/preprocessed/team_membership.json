@@ -1,0 +1,31 @@
+{
+  "teams": ["blue","white", "red", "other", "green","yellow"],
+  "class_to_team":
+    { "B48": "blue",
+      "B10": "blue",
+      "B25": "blue",
+      "A15": "white",
+      "B5": "blue",
+      "A57": "white",
+      "B8": "blue",
+      "A5": "white",
+      "A11": "white",
+      "C-": "red",
+      "other": "other",
+      "A98": "white",
+      "B4": "blue",
+      "A19": "white",
+      "B22": "blue",
+      "B34": "blue",
+      "D-": "red",
+      "A55": "white",
+      "A33": "white",
+      "A20": "white",
+      "B44": "blue",
+
+      "A31": "green",
+      "B27": "blue",
+      "A8": "white",
+      "B1": "yellow"
+    }
+}
