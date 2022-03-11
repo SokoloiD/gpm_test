@@ -4,9 +4,9 @@
 """
 how to use:
 
-python3 predict_team_rest_server.py \
-    -l ../model_weights/team_clf.pth \
-    -t ../data/preprocessed/team_membership.json
+python src/predict_team_rest_server.py \
+    -l model_weights/team_clf.pth \
+    -t data/preprocessed/team_membership.json
 
 
 curl --request POST -F "file=@./data/original/images/203.png" localhost:8000/predict
@@ -28,9 +28,9 @@ from fastapi import FastAPI, File, UploadFile
 from torch import nn
 from torchvision.transforms import Resize, CenterCrop, ToTensor, Normalize, Compose
 
-from src.lib.augmentation_transform import convert_image_to_rgb
-from src.lib.common_utils import print_args
-from src.lib.team_classifier_model import FootballTeamClassifier
+from lib.augmentation_transform import convert_image_to_rgb
+from lib.common_utils import print_args
+from lib.team_classifier_model import FootballTeamClassifier
 
 
 @dataclass

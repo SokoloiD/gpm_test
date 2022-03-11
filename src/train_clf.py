@@ -22,11 +22,11 @@ from sklearn.metrics import confusion_matrix, classification_report
 from torch.utils.data import Subset, DataLoader
 from torchvision.transforms import Resize, CenterCrop, ToTensor, Normalize, RandomHorizontalFlip, InterpolationMode
 
-from src.lib.augmentation_transform import convert_image_to_rgb, PlayerIdToTeamId
-from src.lib.common_utils import print_args
-from src.lib.football_players_dataset import FootballPlayersDataset
-from src.lib.team_classifier_model import FootballTeamClassifier
-from src.lib.train_test_utils import train, validate, predict_from_dataloader
+from lib.augmentation_transform import convert_image_to_rgb, PlayerIdToTeamId
+from lib.common_utils import print_args
+from lib.football_players_dataset import FootballPlayersDataset
+from lib.team_classifier_model import FootballTeamClassifier
+from lib.train_test_utils import train, validate, predict_from_dataloader
 
 BICUBIC = InterpolationMode.BICUBIC
 DEFAULT_TRAIN_TEST_RATIO = 0.8

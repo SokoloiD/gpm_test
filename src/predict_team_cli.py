@@ -1,11 +1,15 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 """
 
 predict team by cropped image
-example:
-predict_team_cli.py -l ../model_weights/team_clf.pth -t ../data/preprocessed/team_membership.json -i ../data/original/images/203.png
+usage :
+python src/predict_team_cli.py \
+    -l model_weights/team_clf.pth \
+    -t data/preprocessed/team_membership.json \
+    -i data/original/images/203.png
+
 
 #Predicted class # 5  team name "yellow"
 
@@ -19,9 +23,9 @@ import torch
 from PIL import Image
 from torchvision.transforms import Resize, CenterCrop, ToTensor, Normalize, Compose
 
-from src.lib.augmentation_transform import convert_image_to_rgb
-from src.lib.common_utils import print_args
-from src.lib.team_classifier_model import FootballTeamClassifier
+from lib.augmentation_transform import convert_image_to_rgb
+from lib.common_utils import print_args
+from lib.team_classifier_model import FootballTeamClassifier
 
 
 logging.basicConfig(level=logging.INFO)
